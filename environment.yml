@@ -1,0 +1,12 @@
+# pymeep is distributed through conda-forge, not PyPI.
+# Create with:  conda env create -f environment.yml
+# Then:         conda activate pinch-harmonics
+name: pinch-harmonics
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pymeep=*=mpi_mpich_*   # MPI-parallel build; drop the build pin for serial pymeep
+  - numpy
+  - matplotlib
+  - scipy
